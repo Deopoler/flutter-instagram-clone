@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_instagram_clone/src/components/image_data.dart';
 import 'package:flutter_instagram_clone/src/controllers/bottom_nav_controller.dart';
+import 'package:flutter_instagram_clone/src/pages/home.dart';
 import 'package:get/get.dart';
 
 class App extends GetView<BottomNavController> {
@@ -12,13 +13,10 @@ class App extends GetView<BottomNavController> {
       () => WillPopScope(
         onWillPop: controller.willPopAction,
         child: Scaffold(
-          appBar: AppBar(),
           body: IndexedStack(
             index: controller.pageIndex.value,
             children: [
-              Container(
-                child: const Center(child: Text("Home")),
-              ),
+              const Home(),
               Container(
                 child: const Center(child: Text("Search")),
               ),
@@ -42,22 +40,22 @@ class App extends GetView<BottomNavController> {
             onTap: controller.changeBottomNav,
             items: [
               BottomNavigationBarItem(
-                icon: ImageData(IconsPath.homeOff),
-                activeIcon: ImageData(IconsPath.homeOn),
+                icon: ImageData(IconPath.homeOff),
+                activeIcon: ImageData(IconPath.homeOn),
                 label: 'home',
               ),
               BottomNavigationBarItem(
-                icon: ImageData(IconsPath.searchOff),
-                activeIcon: ImageData(IconsPath.searchOn),
+                icon: ImageData(IconPath.searchOff),
+                activeIcon: ImageData(IconPath.searchOn),
                 label: 'search',
               ),
               BottomNavigationBarItem(
-                icon: ImageData(IconsPath.uploadIcon),
+                icon: ImageData(IconPath.uploadIcon),
                 label: 'home',
               ),
               BottomNavigationBarItem(
-                icon: ImageData(IconsPath.activeOff),
-                activeIcon: ImageData(IconsPath.activeOn),
+                icon: ImageData(IconPath.activeOff),
+                activeIcon: ImageData(IconPath.activeOn),
                 label: 'home',
               ),
               BottomNavigationBarItem(
