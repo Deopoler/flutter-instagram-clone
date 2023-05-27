@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_instagram_clone/src/components/image_data.dart';
-import 'package:flutter_instagram_clone/src/controller/bottom_nav_controller.dart';
+import 'package:flutter_instagram_clone/src/controllers/bottom_nav_controller.dart';
 import 'package:get/get.dart';
 
 class App extends GetView<BottomNavController> {

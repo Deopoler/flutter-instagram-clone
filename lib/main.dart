@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_instagram_clone/src/app.dart';
-import 'package:flutter_instagram_clone/src/binding/init_bindings.dart';
+import 'package:flutter_instagram_clone/src/bindings/init_bindings.dart';
 import 'package:get/get.dart';
 
 void main() {
